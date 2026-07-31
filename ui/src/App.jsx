@@ -28,7 +28,7 @@ function App() {
   const fetchModelResponse = useCallback(async (model, prompt) => {
     try {
       const encodedPrompt = encodeURIComponent(prompt);
-      const response = await fetch(`http://localhost:8080/api/${model}/${encodedPrompt}`);
+      const response = await fetch(`http://localhost:8086/api/${model}/${encodedPrompt}`);
       
       if (!response.ok) {
         throw new Error(`Error: ${response.status}`);
